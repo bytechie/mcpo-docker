@@ -6,4 +6,4 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./config.json:/app/config.json
+      - /home/techie/devtools/test/mcpo-docker/config.json:/app/config.json
