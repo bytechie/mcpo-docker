@@ -1,9 +1,9 @@
 services:
   mcpo:
-#    build: .
+    build: .
     container_name: mcpo
     image: ghcr.io/alephpiece/mcpo # or alephpiece/mcpo from dockerhub
     ports:
       - "8000:8000"
     volumes:
-      - /home/techie/devtools/test/mcpo-docker/config.json:/app/config.json
+      - ./config.json:/app/config.json
