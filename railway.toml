@@ -11,8 +11,6 @@ path = "./Dockerfile"
 [ports]
 http = 8000
 
-[envVars]
-# Securely inject your API key
 [[envVars]]
 key = "MCPO_API_KEY"
 value = "your-secret-key"

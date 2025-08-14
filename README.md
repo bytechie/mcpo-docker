@@ -46,6 +46,32 @@ With mcpo, each MCP server gets a separate endpoint. For example:
 
 Standard MCP configuration file, see [config.example.json](./config.example.json).
 
+
+
+# Railway platform:
+Integrating openwebui => mcpo => n8n  
+## [Railway-provided Variables](https://docs.railway.com/guides/variables#reference-variables)
+Railway provides many variables to help with development operations. Some of the commonly used variables include -
+
+- RAILWAY_PUBLIC_DOMAIN
+- RAILWAY_PRIVATE_DOMAIN
+- RAILWAY_TCP_PROXY_PORT
+
+## Referencing Another Service's Variable
+Use the following syntax to reference variables in another service:
+
+`${{SERVICE_NAME.VAR}}`
+
+Your frontend service needs to make requests to your backend. You do not want to hardcode the backend URL in your frontend code. Go to your frontend service settings and add the Railway-provided variable for the backend URL
+
+`API_URL=https://${{ backend.RAILWAY_PUBLIC_DOMAIN }}`
+
+
+To use a Streamable HTTP-compatible MCP server, specify the server type and endpoint:
+
+mcpo --port 8000 --api-key "top-secret" --server-type "streamable-http" -- http://127.0.0.1:8002/mcp
+
+
 ## License
 
 MIT
