@@ -20,6 +20,15 @@
                 "mcp-server-time",
                 "--local-timezone=Asia/Shanghai"
             ]
+        },
+        "n8n-mcp": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "streamable-http",
+                "--",
+                "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter"
+            ]
         }
     }
 }
