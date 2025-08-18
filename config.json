@@ -27,7 +27,7 @@
                 "-y",
                 "supergateway",
                 "--sse",
-                "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter/sse"
+                "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter"
             ]
         }
     }
