@@ -25,4 +25,4 @@ value = "streamable-http"
 
 [[envVars]]
 key = "N8N_URL"
-value = "https://${{n8n-railway-custom.RAILWAY_PUBLIC_DOMAIN}}/mcp"
+value = "https://${{n8n-railway-custom.RAILWAY_PUBLIC_DOMAIN}}/mcp/starter"
