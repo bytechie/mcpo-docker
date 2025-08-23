@@ -2,7 +2,7 @@
 
 # Fallback for local dev
 #N8N_URL="https://${RAILWAY_PUBLIC_DOMAIN:-localhost:3000}/mcp/starter"
-MCPO_N8N_URL=""https://${n8n-railway-custom.RAILWAY_PUBLIC_DOMAIN}/mcp/starter""
+MCPO_N8N_URL="https://${n8n-railway-custom.RAILWAY_PUBLIC_DOMAIN}/mcp/starter"
 LOCAL_TIMEZONE="${LOCAL_TIMEZONE:-Asia/Shanghai}"
 echo "what is N*N_URL ${MCPO_N8N_URL}"
 if [ ! -d /app ]; then
