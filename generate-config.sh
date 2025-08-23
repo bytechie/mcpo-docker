@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fallback for local dev
-N8N_URL="https://${RAILWAY_PUBLIC_DOMAIN:-localhost:3000}/mcp/starter"
+#N8N_URL="https://${RAILWAY_PUBLIC_DOMAIN:-localhost:3000}/mcp/starter"
 LOCAL_TIMEZONE="${LOCAL_TIMEZONE:-Asia/Shanghai}"
 echo "what is N*N_URL $N8N_URL"
 if [ ! -d /app ]; then
