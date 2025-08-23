@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.description="Docker image for mcpo (Model Context
 LABEL org.opencontainers.image.source="https://github.com/lkoujiu/mcpo-docker"
 LABEL org.opencontainers.image.licenses="MIT"
 
-# install npx
+# Install dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     nodejs \
@@ -13,15 +13,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# install uv
+# Install uv
 RUN curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/usr/local/bin" sh
+
+# Create /app and non-root user
+RUN mkdir -p /app && useradd -m appuser && chown -R appuser:appuser /app
 WORKDIR /app
 
-# Copy a local file (e.g. config.json) into the container
-#COPY config.json /app/config.json
+# Switch to non-root user
+USER appuser
+
+COPY config.json /app/config.json
+# Copy script
 COPY generate-config.sh /app/generate-config.sh
 RUN chmod +x generate-config.sh
-#RUN chmod +x generate-config.sh && ./generate-config.sh
 
 EXPOSE 8000
 

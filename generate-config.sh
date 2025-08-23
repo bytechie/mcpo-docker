@@ -8,7 +8,7 @@ if [ ! -d /app ]; then
   mkdir -p /app
 fi 
 # Generate config.json
-cat <<EOF > /tmp/config.json
+cat <<EOF > /app/config.json
 {
   "mcpServers": {
     "sequential-thinking": {
