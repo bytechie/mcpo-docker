@@ -20,7 +20,8 @@ WORKDIR /app
 # Copy a local file (e.g. config.json) into the container
 #COPY config.json /app/config.json
 COPY generate-config.sh /app/generate-config.sh
-RUN chmod +x generate-config.sh && ./generate-config.sh
+RUN chmod +x generate-config.sh
+#RUN chmod +x generate-config.sh && ./generate-config.sh
 
 EXPOSE 8000
 

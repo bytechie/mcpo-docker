@@ -1,6 +1,6 @@
 [service]
 name = "mcpo"
-startCommand = "/bin/sh -c 'exec uvx mcpo --port 8000 --api-key ${MCPO_API_KEY}  --config ${CONFIG_PATH} --server-type ${SERVER_TYPE} -- ${N8N_URL}'"
+startCommand = "/bin/sh -c './generate-config.sh && /bin/sh -c 'exec uvx mcpo --port 8000 --api-key ${MCPO_API_KEY}  --config ${CONFIG_PATH} --server-type ${SERVER_TYPE} -- ${N8N_URL}'"
 
 [build]
 builder = "dockerfile"
