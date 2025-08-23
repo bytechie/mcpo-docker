@@ -14,7 +14,7 @@
     },
     "n8n": {
       "command": "npx",
-      "args": ["-y", "supergateway", "--sse", "https://localhost:3000/mcp/starter"]
+      "args": ["-y", "supergateway", "--sse", "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter"]
     }
   }
 }
