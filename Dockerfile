@@ -19,13 +19,14 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/usr/local/
 # Create /app and non-root user
 RUN mkdir -p /app && useradd -m appuser && chown -R appuser:appuser /app
 WORKDIR /app
+# Copy script
+COPY generate-config.sh /app/generate-config.sh
 RUN chmod +x generate-config.sh
 
 # Switch to non-root user
 USER appuser
 COPY config.json /app/config.json
-# Copy script
-COPY generate-config.sh /app/generate-config.sh
+
 
 EXPOSE 8000
 
