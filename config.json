@@ -1,20 +1,8 @@
 {
   "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    },
-    "time": {
-      "command": "uvx",
-      "args": ["mcp-server-time", "--local-timezone=Asia/Shanghai"]
-    },
-    "n8n": {
-      "command": "npx",
-      "args": ["-y", "supergateway", "--sse", "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter"]
+    "n8n_tool": {
+      "type": "sse",
+      "url": "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter"
     }
   }
 }
