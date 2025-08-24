@@ -1,5 +1,6 @@
 [service]
 name = "mcpo"
+startCommand = "/bin/sh -c 'exec uvx mcpo --port 8000 --api-key ${MCPO_API_KEY} --name n8n_tool --server-type ${SERVER_TYPE} -- https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter'"
 
 [build]
 builder = "dockerfile"
@@ -15,10 +16,5 @@ key = "MCPO_API_KEY"
 value = "your-secret-key"
 
 [[envVars]]
-key = "CONFIG_PATH"
-value = "/app/config.json"
-
-[[envVars]]
 key = "SERVER_TYPE"
 value = "streamable-http"
-
