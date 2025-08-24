@@ -1,6 +1,6 @@
 [service]
 name = "mcpo"
-startCommand = "/bin/sh -c 'exec uvx mcpo --port 8000 --api-key ${MCPO_API_KEY} --name n8n_tool --server-type ${SERVER_TYPE} -- https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter'"
+startCommand = "/bin/sh -c 'exec uvx mcpo --port 8000 --api-key ${MCPO_API_KEY} --name n8n_tool_v2 --server-type ${SERVER_TYPE} -- https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter'"
 
 [build]
 builder = "dockerfile"
