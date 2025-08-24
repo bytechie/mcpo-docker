@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "n8n_tool": {
-      "type": "sse",
+      "type": "streamable-http",
       "url": "https://n8n-railway-custom-production-5457.up.railway.app/mcp/starter"
     }
   }
