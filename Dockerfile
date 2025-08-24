@@ -5,6 +5,14 @@ LABEL org.opencontainers.image.description="Docker image for mcpo (Model Context
 LABEL org.opencontainers.image.source="https://github.com/lkoujiu/mcpo-docker"
 LABEL org.opencontainers.image.licenses="MIT"
 
+# Specify the variable you need
+ARG RAILWAY_SERVICE_NAME
+# Use the variable
+RUN echo $RAILWAY_SERVICE_NAME
+
+ARG n8n-railway-custom.RAILWAY_PUBLIC_DOMAIN
+RUN echo $n8n-railway-custom.RAILWAY_PUBLIC_DOMAIN
+
 # Install dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
@@ -31,4 +39,4 @@ COPY config.json /app/config.json
 EXPOSE 8000
 
 ENTRYPOINT ["uvx", "mcpo"]
-#CMD ["--config", "/app/config.json"]
+CMD ["--config", "/app/config.json"]
