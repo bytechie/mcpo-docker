@@ -31,4 +31,4 @@ COPY config.json /app/config.json
 EXPOSE 8000
 
 ENTRYPOINT ["uvx", "mcpo"]
-CMD ["--config", "/app/config.json"]
+#CMD ["--config", "/app/config.json"]
