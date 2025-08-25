@@ -11,7 +11,7 @@ path = "./Dockerfile"
 http = 8000
 
 [deploy]
-startCommand = "/bin/sh -c 'exec uvx mcpo --port 8000 --api-key your-secret-key --name n8n_tool_v2 --server-type streamable-http --  https://${N8N_DOMAIN_URL}/mcp/starter'"
+startCommand = "/bin/sh -c 'exec uvx mcpo --port 8000 --api-key your-secret-key --name n8n_tool_v2 --server-type streamable-http --  https://${N8N_PUBLIC_DOMAIN}/mcp/starter'"
 
 [[envVars]]
 key = "MCPO_API_KEY"
